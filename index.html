@@ -6,46 +6,66 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Interactive card details form</title>
+  <title>Interactive card details form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 <body>
+  <section id="card-front">
+    <img id="card-logo" src="images/card-logo.svg" alt="card-logo">
+    <span id="card-number">0000 0000 0000 0000</span>
+    <div id="card-name-exp">
+      <span id="card-name">MUHAMMAD RIWANDI</span>
+      <span id="card-exp">00/00</span>
+    </div>
+  </section>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+  <section id="card-back">
+    <div id="card-back-container">
+      <span id="cvc">000</span>
+    </div>
+  </section>
 
-  000
+  <section id="cardholder-form">
+    <form action="#">
+      <div class="mb-4">
+        <label for="cardholder-name" class="form-label">CARDHOLDER NAME</label>
+        <input type="text" class="form-control" id="cardholder-name" placeholder="e.g. Jane Appleseed">
+      </div>
 
-  Cardholder Name
-  e.g. Jane Appleseed
+      <div class="mb-4">
+        <label for="cardholder-number" class="form-label">CARD NUMBER</label>
+        <input type="number" class="form-control" id="cardholder-number" placeholder="e.g. 1234 5678 9123 0000">
+      </div>
 
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
+      <div class="row mb-4">
+        <div class="col-6">
+          <label class="form-label">Exp. Date (MM/YY)</label>
+        </div>
+        <div class="col-6">
+          <label class="form-label">CVC</label>
+        </div>
+        <div class="col-3">
+          <input type="number" class="form-control" id="cardholder-exp" placeholder="MM">
+        </div>
+        <div class="col-3">
+          <input type="number" class="form-control" id="cardholder-name" placeholder="YY">
+        </div>
+        <div class="col-6">
+          <input type="number" class="form-control" placeholder="e.g. 123">
+        </div>
+      </div>
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-block">Submit</button>
+      </div>
+    </form>
+  </section>
   
-  <div class="attribution">
+  <!-- <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </footer> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
